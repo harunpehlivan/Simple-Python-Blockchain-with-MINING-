@@ -45,7 +45,7 @@ class Blockchain:
         self.block = self.block.next
 
     def mine(self, block):
-        for n in range(self.maxNonce):
+        for _ in range(self.maxNonce):
             if int(block.hash(), 16) <= self.target:
                 self.add(block)
                 print(block)
